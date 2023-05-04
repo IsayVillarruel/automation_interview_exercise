@@ -1,0 +1,9 @@
+{
+  "name": "automation_interview_exercise",
+  "version": "1.0.0",
+  "description": "Automation test, for interview at Incfile. Made in nodeJs with lib puppeteer",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^20.0.0"
+  }
+}
