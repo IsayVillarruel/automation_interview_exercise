@@ -40,7 +40,6 @@ const puppeteer = require('puppeteer');
 
             for (let link of oCard.links) {
                 await page.goto(link);
-                // await page.waitForSelector('.card-detail-window div.attachment-thumbnail');
                 await page.waitForTimeout(5000);
                 
                 oCard.aTask.push( await page.evaluate( () => {
@@ -100,7 +99,6 @@ const puppeteer = require('puppeteer');
         await page.click('button[aria-label="Añadir proyecto"]');
         await page.waitForTimeout(1500);
 
-        // await page.type('#edit_project_modal_field_name', 'Testing');
         await page.type('#edit_project_modal_field_name', sTableName);
         await page.waitForTimeout(500);
 
@@ -114,8 +112,6 @@ const puppeteer = require('puppeteer');
         await page.waitForTimeout(500);
         
         for (let card of aCards) {
-            let i = 0;
-
             await page.keyboard.press('Escape');
             await page.waitForTimeout(500);
 
